@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html lang="es" <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<title>B&B Aventuras</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Navegación-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Books&Books</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <!--BOTON DESPLEGABLE-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Libros
+                            </a>
+                            <!--MENU DESPLEGABLE-->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="fantasia.html">Fantasía</a></li>
+                                <li><a class="dropdown-item" href="aventura.html">Aventuras</a></li>
+                                <li><a class="dropdown-item" href="romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="todos.html">Todos los tipos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#eventos">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
+                        </li>
+                    </ul>
+                    <!--CUADRADO DE BUSCAR+BOTON BUSCAR-->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+
+                <button class="btn btn-outline-dark btn-lg" style="margin-left:20px; margin-right:20px;"
+                    type="submit">LOG IN</button>
+
+                <!--CARRITO DE LA COMPRA ICON+Enlace al offcanvas-->
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="bi bi-cart4"></i>
+                </a>
+
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="row-2" style="height: 50px;"></div>
+    <div class="row row-cols-1 row-cols-md-6 g-4">
+        <div class="col">
+            <!--PRIMER LIBRO, TARJETA-->
+            <div class="card h-100" nombre="Eleanor&Park" precio="17,99">
+                <img src="img/26.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Eleanor&Park</h5>
+                    <p class="card-text">Una historia de amor entre dosoutsiders lo bastante inteligentes como para
+                        saber que el primer amor nunca es para siempre, pero lo suficientemente valientes como para
+                        intentarlo.<span class="dots">...</span> <span class="more">
+                            -Bono conoció a la que sería su mujer en el instituto -dijo Park.
+                            -Sí, y también Jerry Lee Lewis -contestó Eleanor.
+                            -No estoy bromeando.
+                            -Pues deberías. Tenemos 16 años -dijo Eleanor.
+                            -¿Y qué pasa con Romeo y Julieta?
+                            -Superficiales, confundidos y, posteriormente, muertos.
+                            -Te quiero, y no estoy bromeando -le dijo Park.
+                            -Pues deberías.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Fangirl" precio="17,99">
+                <img src="img/27.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Fangirl</h5>
+                    <p class="card-text">La deliciosa y emotiva historia de unanerd destinada a la grandeza...
+
+                        Cath y Wren son gemelas idénticas, y hasta hace poco lo hacían absolutamente todo juntas. Ahora
+                        están a la universidad. <span class="dots">...</span> <span class="more">Wren le ha dejado claro
+                            que no piensa compartir habitación con ella. Para Wren es una oportunidad única de empezar
+                            de cero y conocer gente. Para Cath no es tan fácil. Es terriblemente tímida. Su único mundo
+                            es ser fan de Simon Snow, donde ella se siente a gusto, donde siempre sabe exactamente qué
+                            decir y donde puede escribir un romance mucho más intenso que cualquier cosa que haya
+                            experimentado en la vida real.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold " style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Segundas oportunidades" precio="17,99">
+                <img src="img/28.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Segundas oportunidades</h5>
+                    <p class="card-text">Si el destino te diera una segunda oportunidad con el amor de tu vida...
+                        ¿harías la misma llamada?
+                        <span class="dots">...</span> <span class="more"> Cuando Georgie y Neal se conocieron, fue amor
+                            a primera vista, un amor que parecía poder con cualquier inconveniente. Pero ahora tienen
+                            problemas, tienen problemas desde hace tiempo. Todavía se aman profundamente, aunque eso
+                            parece no importar. O quizás nunca importó demasiado.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Bajo la misma estrella" precio="15,99">
+                <img src="img/29.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Bajo la misma estrella</h5>
+                    <p class="card-text ">Emotiva, irónica y afilada. Una novela teñida de humor y de tragedia que habla
+                        de nuestra capacidad para soñar incluso en las circunstancias más difíciles.<span
+                            class="dots">...</span> <span class="more">
+
+                            A Hazel y a Gus les gustaría tener vidas más corrientes. Algunos dirían que no han nacido
+                            con estrella, que su mundo es injusto. Hazel y Gus son solo adolescentes, pero si algo les
+                            ha enseñado el cáncer que ambos padecen es que no hay tiempo para lamentaciones, porque, nos
+                            guste o no, solo existe el hoy y el ahora.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">15,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Ciudades de papel" precio="15,99">
+                <img src="img/30.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Ciudades de papel</h5>
+                    <p class="card-text">Una joven desaparece dejando una serie de pistas que solo su mejor amigo de la
+                        infancia podrá descifrar...<span class="dots">...</span> <span class="more">su último año de
+                            instituto, Quentin no ha aprobado ni en popularidad ni en asuntos del corazón. Pero todo
+                            cambia cuando su vecina, la legendaria, inalcanzable y enigmática Margo Spiegelman, se
+                            presenta en mitad de la noche para proponerle que le acompañe en un plan de venganza
+                            inaudito. Después de una intensa noche que reaviva el vínculo de una infancia compartida y
+                            parece sellar un nuevo destino para ambos, Margo desaparece dejando tras de sí un extraño
+                            cerco de pistas que solamente Quentin posee la clave para descifrar.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">15,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más </button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Will Grayson, Will Graysons" precio="15,99">
+                <img src="img/31.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Will Grayson, Will Grayson</h5>
+                    <p class="card-text">Dos chicos, dos vidas, un nombre. Dos autores, dos personajes, un gran libro.
+
+                        Will Grayson tiene dos reglas en la vida: guardar silencio y no implicarse en nada.<span
+                            class="dots">...</span> <span class="more"> Sin embargo, su mejor amigo, Tiny Cooper, está
+                            decidido a buscarle novia y a montar su musical autobiográfico:Tiny Dancer.
+
+                            Muy cerca de él hay otro Will Grayson: un chico melancólico que no tiene nada bueno a lo que
+                            agarrarse. Lo único que hace que su vida merezca la pena es su relaciónonline con Isaac, al
+                            que nunca ha visto en persona.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">15,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El príncipe cruel" precio="19,99">
+                <img src="img/32.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El príncipe cruel</h5>
+                    <p class="card-text">Jude tenía siete años cuando sus padres fueron asesinados y, junto con sus dos
+                        hermana, fue trasladada a la traicionera Corte Suprema del Reino Feérico. Diez años más
+                        tarde,<span class="dots">...</span> <span class="more"> lo único que Jude desea, a pesar de ser
+                            una mera mortal, es sentir que pertenece a ese lugar. Pero muchos de los habitantes
+                            desprecian a los humanos. Especialmente el Príncipe Cardan, el hijo más joven y perverso del
+                            Alto Rey. Para hacerse un hueco en la Corte, Jude deberá enfrentarse a él. Y afrontar las
+                            consecuencias.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El rey malvado" precio="19,99">
+                <img src="img/33.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El rey malvado</h5>
+                    <p class="card-text">Tras descubrir que Oak es el legítimo heredero de Faerie, Jude hará lo posible
+                        por mantener a su hermano pequeño a salvo. Para ello, se ha convertido en el poder a la sombra
+                        del reinado de Cardan.<span class="dots">...</span> <span class="more"> Sin embargo, Cardan hace
+                            todo lo posible por humillarla y menospreciarla a pesar de que su fascinación por ella sigue
+                            intacta. Cuando es más que evidente para Jude que alguien cercano a ella pretende
+                            traicionarla, tratará de averiguar de quién se trata mientras lucha por mantener a raya sus
+                            sentimientos por Cardan.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="La reina de nada" precio="19,99">
+                <img src="img/34.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">La reina de nada</h5>
+                    <p class="card-text">La exiliada reina mortal de Faerie, Jude, ya no tiene poder alguno y aún está
+                        recuperándose de la traición que ha sufrido. Pero está decidida a recuperar todo lo que le han
+                        arrebatado. <span class="dots">...</span> <span class="more">Y su oportunidad llega cuando su
+                            hermana Taryn le pide ayuda porque su vida está en peligro. Jude deberá regresar a la
+                            traicionera corte de Faerie si quiere salvar a su hermana. Pero Elfhame no está como antes
+                            de que Jude se fuera. La guerra es inminente. Y Jude va a tener que entrar en territorio
+                            enemigo para retomar el sangriento juego de poder de los inmortales. Y, cuando una poderosa
+                            maldición se desate y cunda el pánico, Jude deberá elegir entre consumar su ambición o
+                            conservar su humanidad.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Orgullo y prejuicio" precio="12,99">
+                <img src="img/35.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Orgullo y prejuicio</h5>
+                    <p class="card-text">Con la llegada del rico y apuesto señor Darcy a su región, la vida de los
+                        Bennet y sus cinco hijas se vuelve del revés. El orgullo y la distancia social, la astucia y la
+                        hipocresía,<span class="dots">...</span> <span class="more"> los malentendidos y los juicios
+                            apresurados abocan a los personajes al escándalo y al dolor, pero también a la comprensión,
+                            el conocimiento y el amor verdadero.
+
+
+                            Satírica, antirromántica, profunda y mordaz a un tiempo, la obra de Jane Austen nace de la
+                            observación de la vida doméstica y de un profundo conocimiento de la condición
+                            humana.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Circe" precio="17,99">
+                <img src="img/36.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Circe</h5>
+                    <p class="card-text">En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace
+                        una niña. Pero Circe es una niña rara: carece de los poderes de su padre y de la agresiva
+                        capacidad de seducción<span class="dots">...</span> <span class="more">de su madre. Cuando acude
+                            al mundo de los mortales en busca de
+                            compañía, descubre que sí posee un poder, el poder de la brujería, con el que puede
+                            transformar a sus rivales en monstruos y amenazar a los mismísimos dioses.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 " nombre="Maravilloso Desastre" precio="10,5">
+                <img src="img/37.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Maravilloso desastre</h5>
+                    <p class="card-text">Intensa, peligrosa, adictiva... Conoce tu nueva obsesión.
+
+                        LA CHICA BUENA
+                        Abby Abernathy no bebe, no se mete en líos y trabaja muy duro. Cree que ha enterrado su oscuro
+                        pasado, pero cuando llega<span class="dots">...</span> <span class="more">a la universidad, un
+                            rompecorazones conocido por sus ligues de una noche pone en peligro su sueño de una nueva
+                            vida.
+
+                            EL CHICO MALO
+                            Travis Maddox, sexy, musculoso y cubierto de tatuajes, es justamente el tipo de chico que
+                            atrae a Abby, justamente lo que quiere evitar. Dedica sus noches a ganar dinero en un club
+                            de lucha itinerante, y sus días a ser el estudiante ejemplar y el seductor más popular del
+                            campus. Toda una mezcla explosiva...</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">10,50€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Todas las hadas del reino" precio="16,99">
+                <img src="img/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Todas las hadas del reino</h5>
+                    <p class="card-text">Camelia es un hada madrina que lleva trescientos años ayudando con gran
+                        eficacia a jóvenes doncellas y <span class="dots">...</span> <span class="more">aspirantes a
+                            héroe para que alcancen sus propios finales felices.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El nombre del viento" precio="19,99">
+                <img src="img/3.1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El nombre del viento</h5>
+                    <p class="card-text">En una posada en tierra de nadie, un hombre se dispone a relatar, por primera
+                        vez, la auténtica historia de su vida. Una historia que únicamente él conoce y<span
+                            class="dots">...</span> <span class="more"> que ha quedado diluida tras los rumores, las
+                            conjeturas y los cuentos de taberna que le han convertido en un personaje legendario a quien
+                            todos daban ya por muerto: Kvothe... músico, mendigo, ladrón, estudiante, mago, héroe y
+                            asesino.</span> </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100" nombre="El temor de un hombre sabio" precio="19,99">
+                <img src="img/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El temor de un hombre sabio</h5>
+                    <p class="card-text">«Todo hombre sabio teme tres cosas: la tormenta en el mar, la noche sin luna y
+                        la ira de un hombre amable». El hombre había desaparecido. El mito no. Músico, mendigo,
+                        ladrón,<span class="dots">...</span> <span class="more"> estudiante, mago, trotamundos, heroe y
+                            asesino, Kvothe había borrado su rastro. Y ni siquiera
+                            ahora que le han encontrado, ni siquiera ahora que las tinieblas invaden los rincones del
+                            mundo,
+                            está dispuesto a regresar. Pero su historia prosigue, la aventura continúa, y Kvothe seguirá
+                            contándola para revelar la verdad tras la leyenda.
+
+                            "Me llamo Kvothe. Quizá hayas oído hablar de mí..."</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Juego de tronos" precio="19,99">
+                <img src="img/5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Juego de tronos</h5>
+                    <p class="card-text ">«Cuando se juega al juego de tronos, solo se puede ganar o morir. No hay
+                        puntos intermedios.»
+                        En un mundo diferente al nuestro, en el que los veranos y los inviernos duran generaciones, un
+                        gran conflicto está <span class="dots">...</span> <span class="more">a punto de estallar. Robert
+                            Baratheon ocupa el Trono de Hierro en el cálido
+                            y opulento sur de Poniente. Se lo arrebató tras una sangrienta guerra al último rey loco de
+                            la
+                            dinastía Targaryen, señores de dragones.
+
+                            Sin embargo, ahora su poder se ve amenazado: en el norte, el Muro erigido para proteger el
+                            reino
+                            de las bestias y de los extraños se tambalea. Hace siglos que nadie ve a los caminantes
+                            blancos,
+                            pero ¿quiénes son entonces esos seres de ojos azules y fríos que se ocultan en las sombras
+                            de
+                            los bosques y que les arrebatan la vida y la mente a aquellos desafortunados que se cruzan
+                            en su
+                            camino? El final del verano está próximo, se acerca el invierno y solo un milagro podrá
+                            disipar
+                            las tinieblas.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El ciclo del eterno emperador" precio="16,99">
+                <img src="img/6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El ciclo del eterno emperador</h5>
+                    <p class="card-text">El Eterno Emperador gobierna Akidavia durante mil años antes de morir para
+                        renacer de nuevo. Tras la muerte de su última encarnación, varios miembros del Consejo Imperial
+                        se <span class="dots">...</span> <span class="more">presentan en una pequeña aldea en busca del
+                            recien nacido que alberga el alma de Su Divinidad y que, por tanto, debe ocupar el
+                            trono.<br> Esta es la historia de Vintanelalandali, decimoseptima encarnación del Eterno
+                            Emperador, educada desde niña para tomar las riendas del imperio en cuanto sus poderes
+                            despierten. Pero tambien es la historia de Kelan, un muchacho criado en un remoto rincón de
+                            Akidavia, cuya vida cambia de golpe el día en que decide desafiar a la autoridad
+                            local.</span>
+
+
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="La emperatriz de los etéreos" precio="16,99">
+                <img src="img/7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">La emperatriz de los etéreos</h5>
+                    <p class="card-text">Cuentan que más allá de los Montes de Hielo, más allá de la Ciudad de Cristal,
+                        habita la Emperatriz de los Etéreos en un deslumbrante palacio. Dicen que es tan bella que nadie
+                        puede mirarla sin perder la razón. Solo los <span class="dots">...</span> <span class="more">más
+                            osados intentan llegar hasta ella. Pero Bipa no cree en los cuentos de hadas. No le interesa
+                            nada más allá de las cuevas donde vive su gente. En cambio, su amigo Aer, el hijo del
+                            extranjero, parece que cada vez se aleja más de la realidad y va dejándose absorber por el
+                            brillo de la estrella azul... donde dicen que vive la Emperatriz de los Etéreos. ¿Por qué
+                            quiere partir si en el exterior solo hay hielo y, al parecer, lo único que se encuentra es
+                            la muerte?</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Memorias de Idhún I" precio="17,99">
+                <img src="img/8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Memorias de Idhún I</h5>
+                    <p class="card-text">El día en que se produjo en Idhún la conjunción astral de los tres soles y las
+                        tres lunas, Ashran el Nigromante se hizo con el poder en aquel planeta. En nuestro mundo, un
+                        guerrero y un mago exiliados de Idhún<span class="dots">...</span> <span class="more"> han
+                            formado
+                            la Resistencia, a la que pertenecen también Jack y Victoria, dos adolescentes nacidos en la
+                            Tierra. El objetivo del grupo es acabar con el reinado de las serpientes aladas, pero
+                            Kirtash, un joven y despiadado asesino, enviado por Ashran a la Tierra, no se lo va a
+                            permitir.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson I, El ladrón del rayo" precio="14,99">
+                <img src="img/10.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson I, El ladrón del rayo</h5>
+                    <p class="card-text">
+                        «Mira, yo no quería ser mestizo. Si estás leyendo esto porque crees que podrías estar en la
+                        misma situación, mi consejo es este: cierra el libro inmediatamente. Créete la mentira que
+                        tu<span class="dots">...</span> <span class="more">padre o tu madre te contaran sobre tu
+                            nacimiento,
+                            e intenta llevar una vida normal. Ser mestizo
+                            es peligroso. La mayor parte del tiempo solo sirve para que te maten de manera horrible
+                            peligrosa.
+                            Si eres un niño normal, que está leyendo esto porque cree que es ficción, fantástico. Sigue
+                            leyendo. Te envidio por creer que nada de esto sucedió.»</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson II, El mar de los monstruos" precio="14,99">
+                <img src="img/11.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson II, El mar de los monstruos</h5>
+                    <p class="card-text">Desde que sabe que es hijo de un dios y una mortal, Percy Jackson espera que el
+                        destino le depare continuas aventuras. Y su expectativa se cumplirá con creces. Aunque el nuevo
+                        <span class="dots">...</span> <span class="more"> curso en la Escuela Meriwether transcurre con
+                            inusual normalidad, un simple partido de balón
+                            prisionero acaba en batalla campal contra una banda de feroces gigantes. Lo único que puede
+                            salvar el campamento: el Vellocino de Oro.</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson III, La maldicion del Titán" precio="14,99">
+                <img src="img/12.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson III, La maldicion del Titán</h5>
+                    <p class="card-text">Ante la llamada de socorro de su amigo el sátiro Grover, Percy acude
+                        inmediatamente en su auxilio. Y aunque va acompañado de Annabeth y Thalia, las dos
+                        semidiosas<span class="dots">...</span> <span class="more">que son sus aliadas, ninguno imagina
+                            la
+                            sorpresa que los aguarda: una terrible mantícora
+                            pretende secuestrarlos y llevarlos ante el general enviado por Cronos, el diabólico señor de
+                            los
+                            titanes.</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson III, La maldicion del Titán" precio="14,99">
+                <img src="img/13.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson IV, La batalla del laberinto</h5>
+                    <p class="card-text">A punto de comenzar primero de secundaria, Percy Jackson no espera emociones
+                        fuertes, sino más bien un aburrimiento soporífero.<span class="dots">...</span> <span
+                            class="more">Pero cuando en la nueva escuela se presenta
+                            una vieja amiga, seguida de un par de animadoras diabólicas, los acontecimientos se
+                            precipitan y
+                            todo empieza a ir de mal en peor.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="img/14.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson V, EL último héroe del olimpo</h5>
+                    <p class="card-text">La profecía largamente anunciada en torno al decimosexto cumpleaños de Percy se
+                        hace por fin realidad <span id="dots11">...</span> <span id="more11">Mientras en las calles de
+                            Manhattan se libra una despiadada batalla por la civilización
+                            occidental, Percy abriga la terrible sospecha de estar luchando contra su propio
+                            destino...</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Los juegos de hambre" precio="18,99">
+                <img src="img/17.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Los juegos de hambre</h5>
+                    <p class="card-text">En una oscura versión del futuro próximo, doce chicos y doce chicas se ven
+                        obligados a participar en un reality show llamado Los Juegos del Hambre. Solo hay una regla:
+                        matar o morir.
+                        <span class="dots">...</span> <span class="more"><br>Cuando Katniss Everdeen, una joven de
+                            dieciséis
+                            años se presenta voluntaria para ocupar el lugar
+                            de su hermana en los juegos, lo entiende como una condena a muerte. Sin embargo, Katniss ya
+                            ha
+                            visto la muerte de cerca y la supervivencia forma parte de su naturaleza.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="En llamas" precio="18,99">
+                <img src="img/16.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">En llamas</h5>
+                    <p class="card-text">Katniss Everdeen ha sobrevivido a Los juegos del hambre. Pero el Capitolio
+                        quiere venganza.<br> Contra todo pronóstico, Katniss Everdeen y Peeta Mellark siguen vivos.
+                        Aunque Katniss debería sentirse aliviada, <span class="dots">...</span> <span class="more"> se
+                            rumorea que existe una rebelión contra el
+                            Capitolio, una rebelión que puede que Katniss y
+                            Peeta
+                            hayan ayudado a inspirar. La nación les
+                            observa y hay mucho en juego. Un movimiento en falso y las consecuencias serán
+                            inimaginables.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Sinsajo" precio="18,99">
+                <img src="img/18.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Sinsajo</h5>
+                    <p class="card-text">Katniss Everdeen ha sobrevivido dos veces a los Juegos del Hambre, pero no está
+                        a salvo. La revolución se extiende y, al parecer, todos han tenido algo que ver en el meticuloso
+                        plan, todos excepto Katniss.<br><span class="dots">...</span> <span class="more"> Aun así su
+                            papel
+                            en la batalla final es el más importante de todos. Katniss debe convertirse en
+                            el Sinsajo, en el símbolo de la rebelión... a cualquier precio.</span></p>
+
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Donde los árboles cantan" precio="17,99">
+                <img src="img/15.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Donde los árboles cantan</h5>
+                    <p class="card-text ">Algunas historias se escuchan... otras se viven. <br>
+
+                        Viana, la única hija del duque de Rocagrís, está prometida al joven Robian de Castelmar desde
+                        que ambos eran niños.<br>
+
+                        Los dos se aman y se casarán en primavera. <span class="dots">...</span> <span class="more"> Sin
+                            embargo,durante los festejos del solsticio de invierno, un arisco montaraz advierte al rey
+                            de Nortia y sus caballeros de la amenaza de los
+                            bárbaros de las estepas y tanto Robian como el duque se ven obligados a marchar a la
+                            guerra.</span>
+
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El príncipe de la niebla" precio="13,99">
+                <img src="img/19.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El príncipe de la niebla</h5>
+                    <p class="card-text">El nuevo hogar de los Carver, que se han mudado a la costa huyendo de la ciudad
+                        y de la guerra, está rodeado de misterio.
+                        Todavía se respira el espíritu <span class="dots">...</span> <span class="more">de Jacob, el
+                            hijo de
+                            los antiguos propietarios, que murió
+                            ahogado. Las extrañas circunstancias de esa muerte sólo se empiezan a aclarar con la
+                            aparición
+                            de un diabólico personaje: el Príncipe de la Niebla, capaz de conceder cualquier deseo a una
+                            persona; eso sí, a un alto precio.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más </button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El palacio de la medianoche" precio="13,99">
+                <img src="img/20.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El palacio de la medianoche</h5>
+                    <p class="card-text">Calcuta, 1932: El corazón de las tinieblas. Un tren en llamas atraviesa la
+                        ciudad. Un espectro de fuego siembra el terror en las sombras de la noche. Pero eso no es
+                        más<span class="dots">...</span> <span class="more"> que el principio. En la víspera de cumplir
+                            16
+                            años, Ben, Sheere y sus amigos deberán enfrentarse
+                            al más terrible y mortífero enigma de la historia de la ciudad de los palacios.
+                        </span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Las luces de Septiembre" precio="13,99">
+                <img src="img/zafon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Las luces de Septiembre</h5>
+                    <p class="card-text">Un misterioso fabricante de juguetes vive recluido en una mansión gigantesca
+                        poblada de seres mecánicos y sombras del pasado.
+                        Un enigma en torno a las extrañas luces que brillan entre la niebla que rodea el islote del<span
+                            class="dots">...</span> <span class="more">faro. Una criatura de pesadilla que se oculta en
+                            la
+                            profundidad del bosque. Estos y otros
+                            elementos tejen la trama del misterio que unirá a Irene e Ismael para siempre durante un
+                            mágico
+                            verano en Bahía Azul.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El bestiario de Axlin" precio="16,99">
+                <img src="img/21.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El bestiario de Axlin</h5>
+                    <p class="card-text">Axlin ha crecido siendo consciente de que cualquier día le puede tocar a ella.
+                        Su gente ha sobrevivido a los monstruos durante generaciones y ha aprendido a evitarlos en la
+                        medida de lo<span class="dots">...</span> <span class="more"> posible. Pero un día Axlin
+                            descubre
+                            que existen muchos tipos de monstruos
+                            diferentes, que cada aldea se enfrenta a sus propias pesadillas y que hay criaturas que no
+                            conoce y ante las que no sabe cómo defenderse.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre I, El valle de los lobos" precio="12,99">
+                <img src="img/22.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre I, El valle de los lobos</h5>
+                    <p class="card-text">Dana creció junto a sus hermanos llevando una vida normal. El día que el
+                        Maestro la llevó con él a la Torre, en el Valle de los Lobos, no se imaginaba que su vida
+                        <span class="dots">...</span> <span class="more">cambiaría para siempre y que se convertiría en
+                            la
+                            depositaria de secretos tan mágicos como antiguos. ¿Qué aventuras le depara el destino a
+                            nuestra joven heroína? Fantástico libro donde
+                            nos acercamos a un mundo poblado de seres mágicos y criaturas sobrenaturales</span>
+                        .
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre II, La maldición del maestro" precio="12,99">
+                <img src="img/23.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre II, La maldición del maestro</h5>
+                    <p class="card-text">Dana, la actual Señora de la Torre, deberá enfrentarse nuevamente al Maestro;
+                        junto a Fenris, el elfo, tendrá que impedir que se cumpla la venganza del Amo de la Torre.<span
+                            class="dots">...</span> <span class="more"> ¿Conseguirán nuestros héroes que triunfe su
+                            rebelión? Imaginación y fantasía se unen en esta
+                            historia de luchas y seres mágicos.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre III, La llamada de los muertos" precio="12,99">
+                <img src="img/24.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre III, La llamada de los muertos</h5>
+                    <p class="card-text">Tras la llegada a la Torre de Saevin, un muchacho con unos poderes
+                        excepcionales, Dana siente que algo extraño está a punto de suceder y decide viajar a la
+                        Ciudad<span class="dots">...</span> <span class="more"> Olvidada para visitar el Templo Sin
+                            Nombre
+                            y consultar al oráculo. La aterradora profecía que
+                            sale de su boca y en la que se verán implicadas once personas la inquieta todavía más. Pero
+                            ¿existe alguien capaz de manipular los designios del destino?</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="img/25.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre IV, Fenris el elfo</h5>
+                    <p class="card-text">Fenris es un elfo muy especial, tiene poderes inexplicables y en las noches de
+                        luna llena se transforma en<span class="dots">...</span> <span class="more"> un ser
+                            extraordinario; su amor por Shi-Mae y su enfrentamiento con
+                            personajes poderosos del Reino de los Elfos marcarán sus aventuras. ¿Cumplirá su destino y
+                            llegará a la Torre, situada en el Valle de los Lobos? Libro que muestra fantásticas batallas
+                            entre seres sobrenaturales.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!--MENSAJE CUADRO EMERGENTE-->
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HECHO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Has añadido de forma correcta el producto al carrito</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--OFFCANVAS CARRITO DE LA COMPRA-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" id="offcanvasExampleLabel">TU CESTA</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <h6>¿No estás listo para irte? Continúa comprando</h6>
+            </div>
+            <div class="col-2" style=" height: 50px;"> </div><!--ESPACIO EN BLANCO-->
+            <!--AQUI EMPIEZA LA TABLA -->
+            <table class="cartTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+
+                    </tr>
+                    <tr>
+                        <th colspan="3"><!--PARA QUE OCUPE LAS 3 COLUMNAS -->
+                            <hr>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="cartTable">
+
+                    <!--AQUI SE CREA LA TABLA DESDE JS -->
+                </tbody>
+
+            </table>
+            <div class="col-1" style=" height: 20px;"> </div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+            <div>
+                <h5>TOTAL €</h5>
+                <div id="total"></div>
+            </div>
+            <div class="col-1" style=" height: 15px;"> </div><!--ESPACIO EN BLANCO-->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <label class=" form-label " for="form5Example24"><strong>Dirección de envío</strong></label>
+                <input type="direccion" id="form5Example24" class="form-control" />
+                <p><small>*Los costes de envío se calcularán más tarde</small></p>
+            </div>
+            <!--BOTON PAGO -->
+            <div class="row-2" style="height:5px"> </div><!--ESPACIO EN BLANCO-->
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary btn btn-dark btn-lg" type="button" data-bs-toggle="dropdown">
+                    Proceder al pago
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row-2" style="height: 50px;"></div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-outline-dark btn-lg">Cargar más productos</button>
+    </div>
+    <div class="row-2" style="height: 100px;"></div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center" id="footer">
+
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-twitter"></i></i></a>
+                <!-- correo -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-envelope-at"></i></i></a>
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-instagram"></i></a>
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-linkedin"></i></a>
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-github"></i></a>
+            </section>
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Apúntate a la Revista de novedades</strong>
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" />
+                                <label class="form-label" for="form5Example24">Correo electrónico</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- ACEPTAR BOTON -->
+                            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                                Aceptar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </section>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="index.html">Books&Books.com</a>
+        </div>
+
+    </footer>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/js.js"></script>
+
+</html>

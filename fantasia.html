@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="es" <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<title>B&B Fantasía</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Navegación-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Books&Books</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <!--BOTON DESPLEGABLE-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Libros
+                            </a>
+                            <!--MENU DESPLEGABLE-->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="fantasia.html">Fantasía</a></li>
+                                <li><a class="dropdown-item" href="aventura.html">Aventuras</a></li>
+                                <li><a class="dropdown-item" href="romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="todos.html">Todos los tipos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#eventos">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
+                        </li>
+                    </ul>
+                    <!--CUADRADO DE BUSCAR+BOTON BUSCAR-->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+
+                <button class="btn btn-outline-dark btn-lg" style="margin-left:20px; margin-right:20px;"
+                    type="submit">LOG IN</button>
+
+                <!--CARRITO DE LA COMPRA ICON+Enlace al offcanvas-->
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="bi bi-cart4"></i>
+                </a>
+
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="row-2" style="height: 50px;"></div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+    <div class="row row-cols-1 row-cols-md-6 g-4">
+        <div class="col">
+            <!--PRIMER LIBRO, TARJETA-->
+            <div class="card h-100" nombre="Todas las hadas del reino" precio="16,99">
+                <img src="img/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Todas las hadas del reino</h5>
+                    <p class="card-text">Camelia es un hada madrina que lleva trescientos años ayudando con gran
+                        eficacia a jóvenes doncellas y <span class="dots">...</span> <span class="more">aspirantes a
+                            héroe para que alcancen sus propios finales felices.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El nombre del viento" precio="19,99">
+                <img src="img/3.1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El nombre del viento</h5>
+                    <p class="card-text">En una posada en tierra de nadie, un hombre se dispone a relatar, por primera
+                        vez, la auténtica historia de su vida. Una historia que únicamente él conoce y<span
+                            class="dots">...</span> <span class="more"> que ha quedado diluida tras los rumores, las
+                            conjeturas y los cuentos de taberna que le han convertido en un personaje legendario a quien
+                            todos daban ya por muerto: Kvothe... músico, mendigo, ladrón, estudiante, mago, héroe y
+                            asesino.</span> </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El temor de un hombre sabio" precio="19,99">
+                <img src="img/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El temor de un hombre sabio</h5>
+                    <p class="card-text">«Todo hombre sabio teme tres cosas: la tormenta en el mar, la noche sin luna y
+                        la ira de un hombre amable». El hombre había desaparecido. El mito no. Músico, mendigo,
+                        ladrón,<span class="dots">...</span> <span class="more"> estudiante, mago, trotamundos, heroe y
+                            asesino, Kvothe había borrado su rastro. Y ni siquiera
+                            ahora que le han encontrado, ni siquiera ahora que las tinieblas invaden los rincones del
+                            mundo,
+                            está dispuesto a regresar. Pero su historia prosigue, la aventura continúa, y Kvothe seguirá
+                            contándola para revelar la verdad tras la leyenda.
+
+                            "Me llamo Kvothe. Quizá hayas oído hablar de mí..."</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Juego de tronos" precio="19,99">
+                <img src="img/5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Juego de tronos</h5>
+                    <p class="card-text ">«Cuando se juega al juego de tronos, solo se puede ganar o morir. No hay
+                        puntos intermedios.»
+                        En un mundo diferente al nuestro, en el que los veranos y los inviernos duran generaciones, un
+                        gran conflicto está <span class="dots">...</span> <span class="more">a punto de estallar. Robert
+                            Baratheon ocupa el Trono de Hierro en el cálido
+                            y opulento sur de Poniente. Se lo arrebató tras una sangrienta guerra al último rey loco de
+                            la
+                            dinastía Targaryen, señores de dragones.
+
+                            Sin embargo, ahora su poder se ve amenazado: en el norte, el Muro erigido para proteger el
+                            reino
+                            de las bestias y de los extraños se tambalea. Hace siglos que nadie ve a los caminantes
+                            blancos,
+                            pero ¿quiénes son entonces esos seres de ojos azules y fríos que se ocultan en las sombras
+                            de
+                            los bosques y que les arrebatan la vida y la mente a aquellos desafortunados que se cruzan
+                            en su
+                            camino? El final del verano está próximo, se acerca el invierno y solo un milagro podrá
+                            disipar
+                            las tinieblas.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">19,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El ciclo del eterno emperador" precio="16,99">
+                <img src="img/6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El ciclo del eterno emperador</h5>
+                    <p class="card-text">El Eterno Emperador gobierna Akidavia durante mil años antes de morir para
+                        renacer de nuevo. Tras la muerte de su última encarnación, varios miembros del Consejo Imperial
+                        se <span class="dots">...</span> <span class="more">presentan en una pequeña aldea en busca del
+                            recien nacido que alberga el alma de Su Divinidad y que, por tanto, debe ocupar el
+                            trono.<br> Esta es la historia de Vintanelalandali, decimoseptima encarnación del Eterno
+                            Emperador, educada desde niña para tomar las riendas del imperio en cuanto sus poderes
+                            despierten. Pero tambien es la historia de Kelan, un muchacho criado en un remoto rincón de
+                            Akidavia, cuya vida cambia de golpe el día en que decide desafiar a la autoridad
+                            local.</span>
+
+
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="La emperatriz de los etéreos" precio="16,99">
+                <img src="img/7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">La emperatriz de los etéreos</h5>
+                    <p class="card-text">Cuentan que más allá de los Montes de Hielo, más allá de la Ciudad de Cristal,
+                        habita la Emperatriz de los Etéreos en un deslumbrante palacio. Dicen que es tan bella que nadie
+                        puede mirarla sin perder la razón. Solo los <span class="dots">...</span> <span class="more">más
+                            osados intentan llegar hasta ella. Pero Bipa no cree en los cuentos de hadas. No le interesa
+                            nada más allá de las cuevas donde vive su gente. En cambio, su amigo Aer, el hijo del
+                            extranjero, parece que cada vez se aleja más de la realidad y va dejándose absorber por el
+                            brillo de la estrella azul... donde dicen que vive la Emperatriz de los Etéreos. ¿Por qué
+                            quiere partir si en el exterior solo hay hielo y, al parecer, lo único que se encuentra es
+                            la muerte?</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Memorias de Idhún I" precio="17,99">
+                <img src="img/8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Memorias de Idhún I</h5>
+                    <p class="card-text">El día en que se produjo en Idhún la conjunción astral de los tres soles y las
+                        tres lunas, Ashran el Nigromante se hizo con el poder en aquel planeta. En nuestro mundo, un
+                        guerrero y un mago exiliados de Idhún<span class="dots">...</span> <span class="more"> han
+                            formado
+                            la Resistencia, a la que pertenecen también Jack y Victoria, dos adolescentes nacidos en la
+                            Tierra. El objetivo del grupo es acabar con el reinado de las serpientes aladas, pero
+                            Kirtash, un joven y despiadado asesino, enviado por Ashran a la Tierra, no se lo va a
+                            permitir.</span></p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson I, El ladrón del rayo" precio="14,99">
+                <img src="img/10.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson I, El ladrón del rayo</h5>
+                    <p class="card-text">
+                        «Mira, yo no quería ser mestizo. Si estás leyendo esto porque crees que podrías estar en la
+                        misma situación, mi consejo es este: cierra el libro inmediatamente. Créete la mentira que
+                        tu<span class="dots">...</span> <span class="more">padre o tu madre te contaran sobre tu
+                            nacimiento,
+                            e intenta llevar una vida normal. Ser mestizo
+                            es peligroso. La mayor parte del tiempo solo sirve para que te maten de manera horrible
+                            peligrosa.
+                            Si eres un niño normal, que está leyendo esto porque cree que es ficción, fantástico. Sigue
+                            leyendo. Te envidio por creer que nada de esto sucedió.»</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson II, El mar de los monstruos" precio="14,99">
+                <img src="img/11.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson II, El mar de los monstruos</h5>
+                    <p class="card-text">Desde que sabe que es hijo de un dios y una mortal, Percy Jackson espera que el
+                        destino le depare continuas aventuras. Y su expectativa se cumplirá con creces. Aunque el nuevo
+                        <span class="dots">...</span> <span class="more"> curso en la Escuela Meriwether transcurre con
+                            inusual normalidad, un simple partido de balón
+                            prisionero acaba en batalla campal contra una banda de feroces gigantes. Lo único que puede
+                            salvar el campamento: el Vellocino de Oro.</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson III, La maldicion del Titán" precio="14,99">
+                <img src="img/12.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson III, La maldicion del Titán</h5>
+                    <p class="card-text">Ante la llamada de socorro de su amigo el sátiro Grover, Percy acude
+                        inmediatamente en su auxilio. Y aunque va acompañado de Annabeth y Thalia, las dos
+                        semidiosas<span class="dots">...</span> <span class="more">que son sus aliadas, ninguno imagina
+                            la
+                            sorpresa que los aguarda: una terrible mantícora
+                            pretende secuestrarlos y llevarlos ante el general enviado por Cronos, el diabólico señor de
+                            los
+                            titanes.</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Percy Jackson III, La maldicion del Titán" precio="14,99">
+                <img src="img/13.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson IV, La batalla del laberinto</h5>
+                    <p class="card-text">A punto de comenzar primero de secundaria, Percy Jackson no espera emociones
+                        fuertes, sino más bien un aburrimiento soporífero.<span class="dots">...</span> <span
+                            class="more">Pero cuando en la nueva escuela se presenta
+                            una vieja amiga, seguida de un par de animadoras diabólicas, los acontecimientos se
+                            precipitan y
+                            todo empieza a ir de mal en peor.</span> </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="img/14.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Percy Jackson V, EL último héroe del olimpo</h5>
+                    <p class="card-text">La profecía largamente anunciada en torno al decimosexto cumpleaños de Percy se
+                        hace por fin realidad <span id="dots11">...</span> <span id="more11">Mientras en las calles de
+                            Manhattan se libra una despiadada batalla por la civilización
+                            occidental, Percy abriga la terrible sospecha de estar luchando contra su propio
+                            destino...</span>
+                    </p>
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">14,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+    </div>
+    <!--MENSAJE CUADRO EMERGENTE-->
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HECHO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Has añadido de forma correcta el producto al carrito</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--OFFCANVAS CARRITO DE LA COMPRA-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" id="offcanvasExampleLabel">TU CESTA</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <h6>¿No estás listo para irte? Continúa comprando</h6>
+            </div>
+            <div class="col-2" style=" height: 50px;"> </div><!--ESPACIO EN BLANCO-->
+             <!--AQUI EMPIEZA LA TABLA -->
+            <table class="cartTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+
+                    </tr>
+                    <tr>
+                        <th colspan="3"><!--PARA QUE OCUPE LAS 3 COLUMNAS -->
+                          <hr>
+                        </th>
+                      </tr>
+                </thead>
+                <tbody id="cartTable">
+                    <!--AQUI SE CREA LA TABLA DESDE JS -->
+
+                </tbody>
+
+            </table>
+            <div class="col-1" style=" height: 20px;"> </div><!--ESPACIO EN BLANCO-->
+            <!--TOTAL COMPRA -->
+            <div>
+                <h5>TOTAL €</h5>
+                <div id="total"></div>
+              </div>
+              <div class="col-1" style=" height: 15px;"> </div><!--ESPACIO EN BLANCO-->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <label class=" form-label " for="form5Example24"><strong>Dirección de envío</strong></label>
+                <input type="direccion" id="form5Example24" class="form-control" />
+                <p><small>*Los costes de envío se calcularán más tarde</small></p>
+              </div>
+               <!--BOTON PAGO -->
+              <div class="row-2" style="height:5px"> </div><!--ESPACIO EN BLANCO-->
+              <div class="dropdown mt-3">
+                <button class="btn btn-secondary btn btn-dark btn-lg" type="button" data-bs-toggle="dropdown">
+                  Proceder al pago
+                </button>
+              </div>
+            </div>
+          </div>
+    <div class="row-2" style="height: 50px;"></div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+    <!--BOTON  MAS PRODUCTOS-->
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-outline-dark btn-lg">Cargar más productos</button>
+    </div>
+    <div class="row-2" style="height: 50px;"></div><!--ESPACIO EN BLANCO PARA SEPARACION-->
+    <!-- Footer -->
+
+    <footer class="bg-body-tertiary text-center" id="footer">
+
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-twitter"></i></i></a>
+                <!-- correo -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-envelope-at"></i></i></a>
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-instagram"></i></a>
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-linkedin"></i></a>
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-github"></i></a>
+            </section>
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Apúntate a la Revista de novedades</strong>
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" />
+                                <label class="form-label" for="form5Example24">Correo electrónico</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- ACEPTAR BOTON -->
+                            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                                Aceptar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </section>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="index.html">Books&Books.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/js.js"></script>
+
+</html>

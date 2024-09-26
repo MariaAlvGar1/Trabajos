@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="es" <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-icons/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<title>B&B Aventuras</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Navegación-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Books&Books</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <!--BOTON DESPLEGABLE-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Libros
+                            </a>
+                            <!--MENU DESPLEGABLE-->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="fantasia.html">Fantasía</a></li>
+                                <li><a class="dropdown-item" href="aventura.html">Aventuras</a></li>
+                                <li><a class="dropdown-item" href="romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="todos.html">Todos los tipos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#eventos">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
+                        </li>
+                    </ul>
+                    <!--CUADRADO DE BUSCAR+BOTON BUSCAR-->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+
+                <button class="btn btn-outline-dark btn-lg" style="margin-left:20px; margin-right:20px;"
+                    type="submit">LOG IN</button>
+
+                <!--CARRITO DE LA COMPRA ICON+Enlace al offcanvas-->
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="bi bi-cart4"></i>
+                </a>
+
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="row-2" style="height: 50px;"></div>
+    <div class="row row-cols-1 row-cols-md-6 g-4">
+        <div class="col">
+            <div class="card h-100" nombre="Los juegos de hambre" precio="18,99">
+                <img src="img/17.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Los juegos de hambre</h5>
+                    <p class="card-text">En una oscura versión del futuro próximo, doce chicos y doce chicas se ven
+                        obligados a participar en un reality show llamado Los Juegos del Hambre. Solo hay una regla:
+                        matar o morir.
+                        <span class="dots">...</span> <span class="more"><br>Cuando Katniss Everdeen, una joven de
+                            dieciséis
+                            años se presenta voluntaria para ocupar el lugar
+                            de su hermana en los juegos, lo entiende como una condena a muerte. Sin embargo, Katniss ya
+                            ha
+                            visto la muerte de cerca y la supervivencia forma parte de su naturaleza.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="En llamas" precio="18,99">
+                <img src="img/16.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">En llamas</h5>
+                    <p class="card-text">Katniss Everdeen ha sobrevivido a Los juegos del hambre. Pero el Capitolio
+                        quiere venganza.<br> Contra todo pronóstico, Katniss Everdeen y Peeta Mellark siguen vivos.
+                        Aunque Katniss debería sentirse aliviada, <span class="dots">...</span> <span class="more"> se
+                            rumorea que existe una rebelión contra el
+                            Capitolio, una rebelión que puede que Katniss y
+                            Peeta
+                            hayan ayudado a inspirar. La nación les
+                            observa y hay mucho en juego. Un movimiento en falso y las consecuencias serán
+                            inimaginables.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Sinsajo" precio="18,99">
+                <img src="img/18.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Sinsajo</h5>
+                    <p class="card-text">Katniss Everdeen ha sobrevivido dos veces a los Juegos del Hambre, pero no está
+                        a salvo. La revolución se extiende y, al parecer, todos han tenido algo que ver en el meticuloso
+                        plan, todos excepto Katniss.<br><span class="dots">...</span> <span class="more"> Aun así su
+                            papel
+                            en la batalla final es el más importante de todos. Katniss debe convertirse en
+                            el Sinsajo, en el símbolo de la rebelión... a cualquier precio.</span></p>
+
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">18,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Donde los árboles cantan" precio="17,99">
+                <img src="img/15.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Donde los árboles cantan</h5>
+                    <p class="card-text ">Algunas historias se escuchan... otras se viven. <br>
+
+                        Viana, la única hija del duque de Rocagrís, está prometida al joven Robian de Castelmar desde
+                        que ambos eran niños.<br>
+
+                        Los dos se aman y se casarán en primavera. <span class="dots">...</span> <span class="more"> Sin
+                            embargo,durante los festejos del solsticio de invierno, un arisco montaraz advierte al rey
+                            de Nortia y sus caballeros de la amenaza de los
+                            bárbaros de las estepas y tanto Robian como el duque se ven obligados a marchar a la
+                            guerra.</span>
+
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">17,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El príncipe de la niebla" precio="13,99">
+                <img src="img/19.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El príncipe de la niebla</h5>
+                    <p class="card-text">El nuevo hogar de los Carver, que se han mudado a la costa huyendo de la ciudad
+                        y de la guerra, está rodeado de misterio.
+                        Todavía se respira el espíritu <span class="dots">...</span> <span class="more">de Jacob, el
+                            hijo de
+                            los antiguos propietarios, que murió
+                            ahogado. Las extrañas circunstancias de esa muerte sólo se empiezan a aclarar con la
+                            aparición
+                            de un diabólico personaje: el Príncipe de la Niebla, capaz de conceder cualquier deseo a una
+                            persona; eso sí, a un alto precio.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más </button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El palacio de la medianoche" precio="13,99">
+                <img src="img/20.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El palacio de la medianoche</h5>
+                    <p class="card-text">Calcuta, 1932: El corazón de las tinieblas. Un tren en llamas atraviesa la
+                        ciudad. Un espectro de fuego siembra el terror en las sombras de la noche. Pero eso no es
+                        más<span class="dots">...</span> <span class="more"> que el principio. En la víspera de cumplir
+                            16
+                            años, Ben, Sheere y sus amigos deberán enfrentarse
+                            al más terrible y mortífero enigma de la historia de la ciudad de los palacios.
+                        </span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Las luces de Septiembre" precio="13,99">
+                <img src="img/zafon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Las luces de Septiembre</h5>
+                    <p class="card-text">Un misterioso fabricante de juguetes vive recluido en una mansión gigantesca
+                        poblada de seres mecánicos y sombras del pasado.
+                        Un enigma en torno a las extrañas luces que brillan entre la niebla que rodea el islote del<span
+                            class="dots">...</span> <span class="more">faro. Una criatura de pesadilla que se oculta en
+                            la
+                            profundidad del bosque. Estos y otros
+                            elementos tejen la trama del misterio que unirá a Irene e Ismael para siempre durante un
+                            mágico
+                            verano en Bahía Azul.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">13,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="El bestiario de Axlin" precio="16,99">
+                <img src="img/21.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">El bestiario de Axlin</h5>
+                    <p class="card-text">Axlin ha crecido siendo consciente de que cualquier día le puede tocar a ella.
+                        Su gente ha sobrevivido a los monstruos durante generaciones y ha aprendido a evitarlos en la
+                        medida de lo<span class="dots">...</span> <span class="more"> posible. Pero un día Axlin
+                            descubre
+                            que existen muchos tipos de monstruos
+                            diferentes, que cada aldea se enfrenta a sus propias pesadillas y que hay criaturas que no
+                            conoce y ante las que no sabe cómo defenderse.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">16,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre I, El valle de los lobos" precio="12,99">
+                <img src="img/22.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre I, El valle de los lobos</h5>
+                    <p class="card-text">Dana creció junto a sus hermanos llevando una vida normal. El día que el
+                        Maestro la llevó con él a la Torre, en el Valle de los Lobos, no se imaginaba que su vida
+                        <span class="dots">...</span> <span class="more">cambiaría para siempre y que se convertiría en
+                            la
+                            depositaria de secretos tan mágicos como antiguos. ¿Qué aventuras le depara el destino a
+                            nuestra joven heroína? Fantástico libro donde
+                            nos acercamos a un mundo poblado de seres mágicos y criaturas sobrenaturales</span>
+                        .
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre II, La maldición del maestro" precio="12,99">
+                <img src="img/23.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre II, La maldición del maestro</h5>
+                    <p class="card-text">Dana, la actual Señora de la Torre, deberá enfrentarse nuevamente al Maestro;
+                        junto a Fenris, el elfo, tendrá que impedir que se cumpla la venganza del Amo de la Torre.<span
+                            class="dots">...</span> <span class="more"> ¿Conseguirán nuestros héroes que triunfe su
+                            rebelión? Imaginación y fantasía se unen en esta
+                            historia de luchas y seres mágicos.</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100" nombre="Crónicas de la Torre III, La llamada de los muertos" precio="12,99">
+                <img src="img/24.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre III, La llamada de los muertos</h5>
+                    <p class="card-text">Tras la llegada a la Torre de Saevin, un muchacho con unos poderes
+                        excepcionales, Dana siente que algo extraño está a punto de suceder y decide viajar a la
+                        Ciudad<span class="dots">...</span> <span class="more"> Olvidada para visitar el Templo Sin
+                            Nombre
+                            y consultar al oráculo. La aterradora profecía que
+                            sale de su boca y en la que se verán implicadas once personas la inquieta todavía más. Pero
+                            ¿existe alguien capaz de manipular los designios del destino?</span>
+                    </p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="img/25.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fst-italic">Crónicas de la Torre IV, Fenris el elfo</h5>
+                    <p class="card-text">Fenris es un elfo muy especial, tiene poderes inexplicables y en las noches de
+                        luna llena se transforma en<span class="dots">...</span> <span class="more"> un ser
+                            extraordinario; su amor por Shi-Mae y su enfrentamiento con
+                            personajes poderosos del Reino de los Elfos marcarán sus aventuras. ¿Cumplirá su destino y
+                            llegará a la Torre, situada en el Valle de los Lobos? Libro que muestra fantásticas batallas
+                            entre seres sobrenaturales.</span></p>
+
+                </div>
+                <h4 class="font-weight-bold" style="margin-left: 10px;">12,99€</h4>
+                <button class="btn btn-outline-warning myBtn" onclick="MostrarTexto(this)">Leer más</button>
+                <button class="btn btn btn-outline-success" onclick="producto(this)">Añadir al carrito +</button>
+            </div>
+        </div>
+    </div>
+    <!--MENSAJE CUADRO EMERGENTE-->
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HECHO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Has añadido de forma correcta el producto al carrito</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--OFFCANVAS CARRITO DE LA COMPRA-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" id="offcanvasExampleLabel">TU CESTA</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <h6>¿No estás listo para irte? Continúa comprando</h6>
+            </div>
+            <div class="col-2" style=" height: 50px;"> </div><!--ESPACIO EN BLANCO-->
+            <!--AQUI EMPIEZA LA TABLA -->
+            <table class="cartTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+
+                    </tr>
+                    <tr>
+                        <th colspan="3"> <!--PARA QUE OCUPE LAS 3 COLUMNAS -->
+                            <hr>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="cartTable">
+
+                    <!--AQUI SE CREA LA TABLA DESDE JS -->
+                </tbody>
+
+            </table>
+            <div class="col-1" style=" height: 20px;"> </div><!--ESPACIO EN BLANCO-->
+            <div>
+                <h5>TOTAL €</h5>
+                <div id="total"></div>
+            </div>
+            <div class="col-1" style=" height: 15px;"> </div><!--ESPACIO EN BLANCO-->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <label class=" form-label " for="form5Example24"><strong>Dirección de envío</strong></label>
+                <input type="direccion" id="form5Example24" class="form-control" />
+                <p><small>*Los costes de envío se calcularán más tarde</small></p>
+            </div>
+            <!--BOTON PAGO -->
+            <div class="row-2" style="height:5px"> </div><!--ESPACIO EN BLANCO-->
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary btn btn-dark btn-lg" type="button" data-bs-toggle="dropdown">
+                    Proceder al pago
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row-2" style="height: 50px;"></div>
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-outline-dark btn-lg">Cargar más productos</button>
+    </div>
+    <div class="row-2" style="height: 50px;"></div>
+    <!-- Footer -->
+
+    <footer class="bg-body-tertiary text-center" id="footer">
+
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-twitter"></i></i></a>
+                <!-- correo -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-envelope-at"></i></i></a>
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-instagram"></i></a>
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-linkedin"></i></a>
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-github"></i></a>
+            </section>
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Apúntate a la Revista de novedades</strong>
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" />
+                                <label class="form-label" for="form5Example24">Correo electrónico</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- ACEPTAR BOTON -->
+                            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                                Aceptar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </section>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="index.html">Books&Books.com</a>
+        </div>
+
+    </footer>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/js.js"></script>
+
+
+</html>
